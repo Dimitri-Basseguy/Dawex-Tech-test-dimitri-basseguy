@@ -1,0 +1,15 @@
+
+/* font-family: 'Montserrat', sans-serif; */
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__container {
+    display: flex;
+}
