@@ -3,48 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Dawex tech test @ Dimitri Basseguy</title>
 </head>
 <body>
     <header class="header">
         <div class="header__container">
-            <img class="logo" src="" alt="">
-            <div class="header__search">
-                <img class="header__icon" alt="">
-                <input class="header__input-text" type="text">
-            </div>
-            <div>
-                <img class="header__avatar" src="" alt="">
+            <!-- <div> -->
+                <img class="logo" src="" alt="">
+                <div class="header__search">
+                    <img class="header__icon" alt="">
+                    <input class="header__input-text" type="text" placeholder="Search somethings">
+                </div>
+            <!-- </div> -->
+            <div class="header__user">
+                <img class="header__avatar" src="https://cdn.iconscout.com/icon/free/png-256/avatar-380-456332.png" alt="user avatar">
                 <a class="header__link" href="">Varian Wrynn</a>
                 <a class="header__link" href="">Help</a>
             </div>
         </div>
         <nav class="header__nav">
             <ul>
-                <li class="header__nav-link">Menu item 1</li>
-                <li class="header__nav-link">Menu item 2</li>
-                <li class="header__nav-link">Menu item 3</li>
-                <li class="header__nav-link">Menu selected</li>
+                <li class="header__nav-link"><a href="">Menu item 1</a></li>
+                <li class="header__nav-link"><a href="">Menu item 2</a></li>
+                <li class="header__nav-link"><a href="">Menu item 3</a></li>
+                <li class="header__nav-link nav-link--selected"><a href="">Menu item 4</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
-        <aside>
+        <aside class="sidebar">
             <p>Verticaly centered</p>
             <p>Random sidebar content</p>
         </aside>
         <main class="main">
             <h1 class="main__title">Main page title</h1>
+            <h2 class="article__title">Secondary title</h2>
             <article class="article">
-                <h2 class="article__title">Secondary title</h2>
                 <section class="section">
                     <img class="section__img" src="" alt="">
-                    <h3 class="section__title"></h3>
-                    <p class="section__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos quisquam dicta, cumque consequuntur assumenda numquam ut explicabo blanditiis odio minus nisi, dignissimos quaerat voluptatibus sequi architecto beatae obcaecati accusamus asperiores?</p>
+                    <h3 class="section__title">Block title</h3>
+                    <p class="section__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos quisquam dicta, cumque consequuntur assumenda numquam ut explicabo blanditiis odio minus nisi, dignissimos quaerat voluptatibus sequi architecto beatae obcaecati...</p>
                     <a class="section__btn"href=""><button>Call to action</button</a>>
+                </section>
+                <section class="section">
+                    <img class="section__img" src="" alt="">
+                    <h3 class="section__title">Block title</h3>
+                    <p class="section__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos quisquam dicta, cumque consequuntur assumenda numquam ut explicabo blanditiis odio minus nisi, dignissimos quaerat voluptatibus sequi architecto beatae obcaecati...</p>
+                    <a class="section__btn"href=""><button>Call to action</button</a>>
+                </section>
+                <section class="section">
+                    <img class="section__img" src="" alt="">
+                    <h3 class="section__title">Block title</h3>
+                    <p class="section__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos quisquam dicta, cumque consequuntur assumenda numquam ut explicabo blanditiis odio minus nisi, dignissimos quaerat voluptatibus sequi architecto beatae obcaecati...</p>
+                    <a class="section__btn"href="">Call to action</a>
                 </section>
             </article>
         </main>
