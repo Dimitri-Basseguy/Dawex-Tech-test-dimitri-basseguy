@@ -16,6 +16,7 @@ body {
     width: 51px;
     height: 50px;
     border-radius: 50%;
+    margin-right: 1rem;
 }
 
 .header {
@@ -30,6 +31,27 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media only screen and (max-device-width: 480px) {
+            /* styles for mobile browsers smaller than 480px; (iPhone) */
+            & {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__intro {
+        display: flex;
+        width: 40%;
+
+        @media only screen and (max-device-width: 480px) {
+            /* styles for mobile browsers smaller than 480px; (iPhone) */
+            & {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
     }
 
     &__search {
@@ -37,7 +59,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: left;
-        width: 575px;
+        width: 100%;
         background-color:#F8F8FB;
         border-radius: 12px;
     }
@@ -46,7 +68,6 @@ body {
         margin: 1rem;
         width: 18px;
         height: 18px;
-        background-color: grey;
     }
 
     &__input-text {
@@ -79,8 +100,12 @@ body {
 
     &__nav {
         margin-top: 1rem;
-        border-top: 1px solid #707275;
+        border-top: 1px solid rgba(112, 124, 144, 0.120274);
         font-weight: 700;
+    }
+
+    &__nav > ul {
+        padding: 0;
     }
     
     &__nav-link {
@@ -159,17 +184,48 @@ body {
     border-radius: 12px;
     color: #373737;
 
-    @media screen and (max-width: 900px) {
+    /* default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+    @media only screen and (min-width: 960px) {
+        /* styles for browsers larger than 960px; */
         & {
-           width: 100%;
+            min-width: 15rem;
+            max-width: 20%;
         }
     }
 
-    @media screen and (min-width: 900px) {
+    @media only screen and (min-width: 1440px) {
+        /* styles for browsers larger than 1440px; */
+    }
+
+    @media only screen and (min-width: 2000px) {
+        /* for sumo sized (mac) screens */
         & {
-           min-width: 15rem;
-           max-width: 20rem;
+            min-width: 15rem;
+            max-width: 20%;
         }
+    }
+
+    @media only screen and (max-device-width: 480px) {
+       /* styles for mobile browsers smaller than 480px; (iPhone) */
+       & {
+           width: 100%;
+           margin: .5rem;
+        }
+    }
+
+    @media only screen and (device-width: 768px) {
+       /* default iPad screens */
+    }
+
+    /* different techniques for iPad screening */
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+      /* For portrait layouts only */
+    }
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+      /* For landscape layouts only */
     }
 
     &__img {
@@ -203,6 +259,31 @@ body {
     }
     
 }
+
+.footer {
+    display: flex;
+    border-bottom: 5px solid #F8A000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    justify-content: start;
+    
+    &__nav-link {
+        display: inline;
+        margin-right: 1rem;
+    }
+
+    &__nav-link a {
+        text-decoration: none;
+        color: $textColor;
+    }
+
+    &__nav-link a:hover {
+        border-bottom: 5px solid #F8A000;
+    }
+}
+
+
 
 
 

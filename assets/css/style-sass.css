@@ -6,7 +6,8 @@ body {
 .logo {
   width: 51px;
   height: 50px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  margin-right: 1rem; }
 
 .header {
   display: flex;
@@ -19,19 +20,32 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media only screen and (max-device-width: 480px) {
+      .header__container {
+        /* styles for mobile browsers smaller than 480px; (iPhone) */ }
+        .header__container {
+          flex-direction: column; } }
+  .header__intro {
+    display: flex;
+    width: 40%; }
+    @media only screen and (max-device-width: 480px) {
+      .header__intro {
+        /* styles for mobile browsers smaller than 480px; (iPhone) */ }
+        .header__intro {
+          width: 100%;
+          margin-bottom: 1rem; } }
   .header__search {
     height: 3rem;
     display: flex;
     align-items: center;
     justify-content: left;
-    width: 575px;
+    width: 100%;
     background-color: #F8F8FB;
     border-radius: 12px; }
   .header__icon {
     margin: 1rem;
     width: 18px;
-    height: 18px;
-    background-color: grey; }
+    height: 18px; }
   .header__input-text {
     font-size: 1em;
     width: 70%;
@@ -54,8 +68,10 @@ body {
     color: #373737; }
   .header__nav {
     margin-top: 1rem;
-    border-top: 1px solid #707275;
+    border-top: 1px solid rgba(112, 124, 144, 0.120274);
     font-weight: 700; }
+  .header__nav > ul {
+    padding: 0; }
   .header__nav-link {
     display: inline;
     margin-right: 1rem; }
@@ -108,14 +124,41 @@ body {
   background: #FFFFFF;
   box-shadow: 0px 6px 12px rgba(74, 100, 160, 0.1);
   border-radius: 12px;
-  color: #373737; }
-  @media screen and (max-width: 900px) {
+  color: #373737;
+  /* default styles here for older browsers. 
+     I tend to go for a 600px - 960px width max but using percentages
+  */
+  /* different techniques for iPad screening */ }
+  @media only screen and (min-width: 960px) {
     .section {
-      width: 100%; } }
-  @media screen and (min-width: 900px) {
+      /* styles for browsers larger than 960px; */ }
+      .section {
+        min-width: 15rem;
+        max-width: 20%; } }
+  @media only screen and (min-width: 1440px) {
     .section {
-      min-width: 15rem;
-      max-width: 20rem; } }
+      /* styles for browsers larger than 1440px; */ } }
+  @media only screen and (min-width: 2000px) {
+    .section {
+      /* for sumo sized (mac) screens */ }
+      .section {
+        min-width: 15rem;
+        max-width: 20%; } }
+  @media only screen and (max-device-width: 480px) {
+    .section {
+      /* styles for mobile browsers smaller than 480px; (iPhone) */ }
+      .section {
+        width: 100%;
+        margin: .5rem; } }
+  @media only screen and (device-width: 768px) {
+    .section {
+      /* default iPad screens */ } }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .section {
+      /* For portrait layouts only */ } }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .section {
+      /* For landscape layouts only */ } }
   .section__img {
     width: 59px;
     height: 59px;
@@ -136,5 +179,21 @@ body {
   .section a:hover {
     background-color: #373737;
     color: #F8A000; }
+
+.footer {
+  display: flex;
+  border-bottom: 5px solid #F8A000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  justify-content: start; }
+  .footer__nav-link {
+    display: inline;
+    margin-right: 1rem; }
+  .footer__nav-link a {
+    text-decoration: none;
+    color: #373737; }
+  .footer__nav-link a:hover {
+    border-bottom: 5px solid #F8A000; }
 
 /*# sourceMappingURL=style-sass.css.map */
